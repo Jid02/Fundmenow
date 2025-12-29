@@ -1,0 +1,125 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+}
+
+.dashboard-shell {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.stat-card-title {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.stat-card-value {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.badge-pill {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #e5f5ff;
+  color: #0369a1;
+}
+
+.donation-list {
+  margin-top: 18px;
+}
+
+.donation-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr 0.9fr 1.1fr;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.donation-row.header {
+  font-weight: 600;
+  color: #4b5563;
+  border-bottom-width: 2px;
+}
+
+.donation-campaign {
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-campaign-title {
+  font-weight: 500;
+}
+
+.donation-campaign-meta {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.donation-amount {
+  font-weight: 600;
+  color: #111827;
+}
+
+.donation-date {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.donation-message {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 28px 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .donation-row {
+    grid-template-columns: 1.6fr 0.9fr;
+    grid-row-gap: 6px;
+  }
+  .donation-date,
+  .donation-message {
+    grid-column: 1 / -1;
+  }
+}
